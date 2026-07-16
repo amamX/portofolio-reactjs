@@ -1,9 +1,10 @@
+import logo from "../img/logo/iconAmam__1_-removebg-preview.png";
 export default function Footer() {
   return (
     <footer className="pt-16 pb-8 bg-dark">
       <div className="container">
         <div className="flex flex-col items-center gap-6 px-4 text-center">
-          <img src="/src/img/logo/iconAmam.svg" alt="" className="h-20 w-20" />
+          <img src={logo} alt="logo" className="h-20 w-20" />
 
           <p className="text-sm font-medium text-slate-400">
             lanxft1204@gmail.com · Banjarmasin, Kalimantan Selatan

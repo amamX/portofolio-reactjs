@@ -1,3 +1,4 @@
+import logo from "../img/logo/iconAmam__1_-removebg-preview.png";
 import { useState, useEffect } from "react";
 
 export default function Loading() {
@@ -26,7 +27,7 @@ export default function Loading() {
       <div className="relative flex items-center justify-center mb-6">
         <div className="absolute w-20 h-20 border-4 rounded-full border-primary/20"></div>
         <div className="absolute w-20 h-20 border-4 border-t-primary border-r-transparent border-b-transparent border-l-transparent rounded-full animate-spin"></div>
-        <img src="/src/img/logo/iconAmam.svg" alt="Logo" className="w-8 h-8" />
+        <img src={logo} alt="Logo" className="w-8 h-8" />
       </div>
 
       {/* Teks dengan animasi titik-titik */}

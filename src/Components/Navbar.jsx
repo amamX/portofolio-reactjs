@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Home, User, FolderKanban, Mail } from "lucide-react";
 import "animate.css";
+import logo from "../img/logo/iconAmam__1_-removebg-preview.png";
 
 const navItems = [
   { id: "home", label: "Home", icon: Home },
@@ -48,11 +49,7 @@ function Navbar() {
       <div className="container">
         <div className="relative flex items-center justify-between">
           <div className="px-4 ">
-            <img
-              src="/src/img/logo/iconAmam.svg"
-              alt=""
-              className="w-25 h-20"
-            />
+            <img src={logo} alt="logo" className="w-25 h-20" />
           </div>
           <div className="flex items-center px-4">
             <button

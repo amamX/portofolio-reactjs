@@ -1,52 +1,44 @@
 import freeCodeCamp from "./img/logo/fcc3.jpg";
-import responsiveWebDesign from "./img/sertifikat/codeorg.png";
-import fundamentalWebsite from "./img/sertifikat/inti.png";
+import AIOcean from "./img/sertifikat/codeorg.png";
+import inti from "./img/sertifikat/inti.png";
 import camp404 from "./img/logo/camp404.jpg";
-import basicWebProgramming from "./img/sertifikat/bronze.png";
+import pin2 from "./img/sertifikat/bronze.png";
 import dicoding from "./img/logo/dicoding.png";
-import basicJavascript from "./img/sertifikat/inti.png";
-import frontendForBeginner from "./img/sertifikat/bem.png";
+import bem from "./img/sertifikat/bem.png";
 import mySkill from "./img/logo/myskill.webp";
 
 const CerData = [
   {
     id: "1",
 
-    img: responsiveWebDesign,
+    img: AIOcean,
     logo: freeCodeCamp,
-    alt: "Responsive web design certificate",
+    alt: "certifikat",
     title: "Hour Of Code",
     text: "#000000",
   },
   {
     id: "2",
-    img: fundamentalWebsite,
+    img: inti,
     logo: camp404,
-    alt: "Fundamental Website Certificate",
+    alt: "certifikat",
     title: "Stadium Generate",
     text: "#0369a1",
   },
   {
     id: "3",
-    img: basicWebProgramming,
+    img: pin2,
     logo: dicoding,
-    alt: "Basic Web Programming Certificate",
+    alt: "certifikat",
     title: "Pekan Ilmiah Nusantara",
     text: "#0f172a",
   },
-  {
-    id: "4",
-    img: basicJavascript,
-    logo: dicoding,
-    alt: "Basic Javascript Certificate",
-    title: "",
-    text: "#0f172a",
-  },
+
   {
     id: "5",
-    img: frontendForBeginner,
+    img: bem,
     logo: dicoding,
-    alt: "Front-End for Beginner Certificate",
+    alt: " Certificate",
     title: "Pelatihan Mahasiswa",
     text: "#0f172a",
   },
