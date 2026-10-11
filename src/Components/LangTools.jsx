@@ -1,6 +1,6 @@
 import Data from "../Data";
 import { Marquee } from "./ui/marquee";
-import { Wrench, Sparkles } from "lucide-react";
+import { Wrench } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
 
 /**

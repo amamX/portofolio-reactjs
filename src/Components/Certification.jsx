@@ -1,11 +1,9 @@
-/* eslint-disable react/prop-types */
 import { useState } from "react";
 import {
   ExternalLink,
   Download,
   Eye,
   X,
-  FileText,
   Calendar,
   CheckCircle2,
   Award,

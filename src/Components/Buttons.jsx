@@ -1,8 +1,5 @@
-/* eslint-disable react/jsx-key */
-/* eslint-disable react/prop-types */
-import Aos from "aos";
 import "aos/dist/aos.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Data from "../Data";
 
 export default function Buttons({ menuItems, filterItems, setItems }) {

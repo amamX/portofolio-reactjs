@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Home, User, FolderKanban, Mail, Globe } from "lucide-react";
+import { Home, User, FolderKanban, Mail } from "lucide-react";
 import "animate.css";
 import logo from "../img/logo/iconAmam__1_-removebg-preview.png";
 import { useLanguage } from "../context/LanguageContext";
+
+const SECTION_IDS = ["home", "about", "projects", "contact"];
 
 function Navbar() {
   const [isNavMenuOpen, setIsNavMenuOpen] = useState(false);
@@ -18,8 +20,8 @@ function Navbar() {
   ];
 
   useEffect(() => {
-    const sections = navItems
-      .map((item) => document.getElementById(item.id))
+    const sections = SECTION_IDS
+      .map((id) => document.getElementById(id))
       .filter(Boolean);
 
     const observer = new IntersectionObserver(
@@ -40,7 +42,7 @@ function Navbar() {
     return () => {
       sections.forEach((section) => observer.unobserve(section));
     };
-  }, [navItems]);
+  }, []);
 
   const toggleNavMenu = () => {
     setIsNavMenuOpen(!isNavMenuOpen);

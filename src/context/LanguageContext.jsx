@@ -1,10 +1,10 @@
-import React, { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 // Inisialisasi Context Bahasa
 const LanguageContext = createContext();
 
 // Kamus terjemahan bilingual (Indonesia & English)
-export const translations = {
+const translations = {
   id: {
     navbar: {
       home: "Beranda",
@@ -375,6 +375,7 @@ export function LanguageProvider({ children }) {
 /**
  * Custom hook untuk mengakses terjemahan dan fungsi switch bahasa.
  */
+// eslint-disable-next-line react-refresh/only-export-components
 export function useLanguage() {
   const context = useContext(LanguageContext);
   if (!context) {

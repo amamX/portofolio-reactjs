@@ -1,10 +1,7 @@
-import Aos from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
 import dicodingLogo from "../img/logo/dicoding.png";
 import uniskaLogo from "../img/logo/uniska.png";
 import {
-  GraduationCap,
   Cloud,
   Code2,
   Calendar,

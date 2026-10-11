@@ -1,6 +1,4 @@
-import Aos from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
 import { ArrowUpRight, ExternalLink, Globe } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 import { useLanguage } from "../context/LanguageContext";

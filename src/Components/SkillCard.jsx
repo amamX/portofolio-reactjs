@@ -1,7 +1,4 @@
-/* eslint-disable react/prop-types */
-import Aos from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect } from 'react';
 export default function SkillCard({item}){
   return(
     <div className="grid grid-cols-2 gap-4 px-4 mt-6 lg:grid-cols-4">

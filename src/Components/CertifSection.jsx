@@ -1,7 +1,7 @@
 import { useState } from "react";
 import CerData from "../CerData";
 import Certification from "./Certification";
-import { Award, Sparkles } from "lucide-react";
+import { Award } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
 
 export default function CertifSection() {

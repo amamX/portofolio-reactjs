@@ -1,7 +1,6 @@
 import Dep from "../img/amamFotoWeb2.jpeg";
-import Aos from "aos";
 import "aos/dist/aos.css";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { Sparkles, GraduationCap, Code2, ArrowUpRight } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";

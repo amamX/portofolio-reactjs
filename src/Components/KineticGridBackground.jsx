@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 /**
  * Komponen KineticGridBackground:
@@ -200,7 +200,7 @@ export default function KineticGridBackground({
               ctx.beginPath();
               ctx.moveTo(p1.x, p1.y);
               ctx.lineTo(p2.x, p2.y);
-              ctx.strokeStyle = `rgba(56, 189, 248, ${avgIntH * 0.6})`;
+              ctx.strokeStyle = activeLineColor;
               ctx.lineWidth = 1 + avgIntH * 1.5;
               ctx.stroke();
             }
@@ -211,7 +211,7 @@ export default function KineticGridBackground({
               ctx.beginPath();
               ctx.moveTo(p1.x, p1.y);
               ctx.lineTo(p3.x, p3.y);
-              ctx.strokeStyle = `rgba(56, 189, 248, ${avgIntV * 0.6})`;
+              ctx.strokeStyle = activeLineColor;
               ctx.lineWidth = 1 + avgIntV * 1.5;
               ctx.stroke();
             }
@@ -229,9 +229,9 @@ export default function KineticGridBackground({
           ctx.arc(pt.x, pt.y, r, 0, Math.PI * 2);
 
           if (pt.intensity > 0.05) {
-            ctx.fillStyle = `rgba(56, 189, 248, ${0.4 + pt.intensity * 0.6})`;
+            ctx.fillStyle = activeDotColor;
             // Efek shadow pendar neon
-            ctx.shadowColor = "rgba(56, 189, 248, 0.8)";
+            ctx.shadowColor = activeDotColor;
             ctx.shadowBlur = pt.intensity * 8;
           } else {
             ctx.fillStyle = dotColor;
@@ -254,7 +254,7 @@ export default function KineticGridBackground({
       window.removeEventListener("mouseleave", handleMouseLeave);
       window.removeEventListener("click", handleClick);
     };
-  }, [gridSize, dotSize, warpRadius, warpStrength, gridColor, dotColor, showLines]);
+  }, [gridSize, dotSize, warpRadius, warpStrength, gridColor, dotColor, activeDotColor, activeLineColor, showLines]);
 
   return (
     <canvas

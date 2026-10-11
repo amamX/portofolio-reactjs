@@ -1,9 +1,8 @@
-import Aos from "aos";
 import "aos/dist/aos.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import ProjData from "../ProjData";
 import Project from "./Project";
-import { FolderKanban, Sparkles } from "lucide-react";
+import { Sparkles } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
 
 export default function Works() {

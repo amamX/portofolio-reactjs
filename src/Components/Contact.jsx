@@ -1,6 +1,5 @@
-import Aos from "aos";
 import "aos/dist/aos.css";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import {
   Mail,
@@ -11,7 +10,6 @@ import {
   CheckCircle,
   AlertCircle,
   Loader2,
-  ArrowUpRight,
 } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { useLanguage } from "../context/LanguageContext";
