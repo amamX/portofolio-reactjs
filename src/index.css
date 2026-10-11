@@ -3,6 +3,16 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --sky-400: #38bdf8;
+  --sky-500: #0ea5e9;
+}
+
+.dark {
+  --sky-400: #38bdf8;
+  --sky-500: #0ea5e9;
+}
+
 @layer components {
   .grid-card {
     @apply flex items-center p-2 duration-500 border-2 rounded-lg max-h-16;

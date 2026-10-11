@@ -75,6 +75,20 @@ const Data = [
     category: "Web Development",
     border: "#00758F",
   },
+  {
+    id: "13",
+    title: "PostgreSQL",
+    logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg",
+    category: "Database",
+    border: "#336791",
+  },
+  {
+    id: "14",
+    title: "Supabase",
+    logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/supabase/supabase-original.svg",
+    category: "Backend",
+    border: "#3ECF8E",
+  },
 ];
 
 export default Data;

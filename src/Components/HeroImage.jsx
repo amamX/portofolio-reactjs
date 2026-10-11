@@ -60,7 +60,7 @@ export default function HeroImage() {
   };
 
   return (
-    <div className="self-center w-full px-4 lg:w-1/2 animate__animated animate__fadeInRight">
+    <div className="flex items-center justify-center w-full px-2 sm:px-4 lg:w-1/2 animate__animated animate__fadeInRight">
       <div
         ref={cardRef}
         onMouseMove={handleMouseMove}
@@ -88,9 +88,15 @@ export default function HeroImage() {
         {/* Foto */}
         <img
           src={Computer}
-          alt="Computer"
+          alt="Ahmad Maulana"
           className="
-            md:max-w-lg
+            w-full
+            max-w-[280px]
+            sm:max-w-[340px]
+            md:max-w-[380px]
+            lg:max-w-[400px]
+            xl:max-w-[440px]
+            aspect-[4/5]
             rounded-3xl
             border border-white/10
             select-none
@@ -98,6 +104,7 @@ export default function HeroImage() {
             relative
             z-10
             object-cover
+            object-top
           "
         />
 

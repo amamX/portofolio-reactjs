@@ -13,10 +13,6 @@ export default function Buttons({ menuItems, filterItems, setItems }) {
     filterItems(val);
   };
 
-  useEffect(() => {
-    Aos.init({ duration: 700 });
-  }, []);
-
   return (
     <div className="flex px-4 mt-2">
       <button
