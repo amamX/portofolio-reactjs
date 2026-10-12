@@ -132,6 +132,9 @@ const translations = {
       downloadPdf: "Unduh PDF",
       verify: "Verifikasi Online",
       credentialId: "ID Kredensial",
+      viewMore: "Lihat Sertifikat Lainnya",
+      viewLess: "Tampilkan Lebih Sedikit",
+      showingCount: "Menampilkan 6 dari {total} sertifikat",
     },
     projects: {
       badge: "KARYA & PORTOFOLIO",
@@ -301,6 +304,9 @@ const translations = {
       downloadPdf: "Download PDF",
       verify: "Online Verification",
       credentialId: "Credential ID",
+      viewMore: "View More Certificates",
+      viewLess: "Show Less",
+      showingCount: "Showing 6 of {total} certificates",
     },
     projects: {
       badge: "FEATURED WORK",

@@ -85,10 +85,10 @@ export default function Contact() {
             <Sparkles size={14} className="text-primary" />
             <span>{t.contact.badge}</span>
           </div>
-          <h3 className="text-3xl font-extrabold text-dark lg:text-4xl">
+          <h3 className="text-3xl font-extrabold text-dark dark:text-white lg:text-4xl transition-colors">
             {t.contact.title}
           </h3>
-          <p className="max-w-2xl mt-3 text-sm font-normal text-slate-500 lg:text-base">
+          <p className="max-w-2xl mt-3 text-sm font-normal text-slate-500 dark:text-slate-400 lg:text-base">
             {t.contact.subtitle}
           </p>
         </div>
@@ -197,14 +197,14 @@ export default function Contact() {
             className="lg:col-span-7"
             data-aos="fade-left"
           >
-            <div className="p-7 sm:p-9 bg-white rounded-3xl border border-slate-200/80 shadow-[0_4px_25px_-5px_rgba(0,0,0,0.05)]">
+            <div className="p-7 sm:p-9 bg-white dark:bg-slate-900/90 rounded-3xl border border-slate-200/80 dark:border-slate-800 shadow-[0_4px_25px_-5px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_25px_-5px_rgba(0,0,0,0.4)] transition-colors">
               <form ref={form} onSubmit={sendEmail} className="space-y-5">
                 {/* Input Nama & Email */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
                     <label
                       htmlFor="user_name"
-                      className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5"
+                      className="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5"
                     >
                       {t.contact.nameLabel} <span className="text-red-500">*</span>
                     </label>
@@ -214,14 +214,14 @@ export default function Contact() {
                       name="name"
                       required
                       placeholder={t.contact.namePlaceholder}
-                      className="w-full px-4 py-3 text-sm rounded-xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:bg-white focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all duration-200"
+                      className="w-full px-4 py-3 text-sm rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:bg-white dark:focus:bg-slate-800 focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all duration-200"
                     />
                   </div>
 
                   <div>
                     <label
                       htmlFor="user_email"
-                      className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5"
+                      className="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5"
                     >
                       {t.contact.emailLabel} <span className="text-red-500">*</span>
                     </label>
@@ -231,7 +231,7 @@ export default function Contact() {
                       name="email"
                       required
                       placeholder={t.contact.emailPlaceholder}
-                      className="w-full px-4 py-3 text-sm rounded-xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:bg-white focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all duration-200"
+                      className="w-full px-4 py-3 text-sm rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:bg-white dark:focus:bg-slate-800 focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all duration-200"
                     />
                   </div>
                 </div>
@@ -240,7 +240,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="user_subject"
-                    className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5"
+                    className="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5"
                   >
                     {t.contact.subjectLabel}
                   </label>
@@ -249,7 +249,7 @@ export default function Contact() {
                     id="user_subject"
                     name="subject"
                     placeholder={t.contact.subjectPlaceholder}
-                    className="w-full px-4 py-3 text-sm rounded-xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:bg-white focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all duration-200"
+                    className="w-full px-4 py-3 text-sm rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:bg-white dark:focus:bg-slate-800 focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all duration-200"
                   />
                 </div>
 
@@ -257,7 +257,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="user_message"
-                    className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5"
+                    className="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5"
                   >
                     {t.contact.messageLabel} <span className="text-red-500">*</span>
                   </label>
@@ -267,7 +267,7 @@ export default function Contact() {
                     required
                     rows={5}
                     placeholder={t.contact.messagePlaceholder}
-                    className="w-full px-4 py-3 text-sm rounded-xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:bg-white focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all duration-200 resize-none"
+                    className="w-full px-4 py-3 text-sm rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:bg-white dark:focus:bg-slate-800 focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all duration-200 resize-none"
                   ></textarea>
                 </div>
 
@@ -292,8 +292,8 @@ export default function Contact() {
 
                 {/* Banner Status Berhasil */}
                 {status === "success" && (
-                  <div className="flex items-start gap-3 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 animate__animated animate__fadeIn">
-                    <CheckCircle size={18} className="text-emerald-600 shrink-0 mt-0.5" />
+                  <div className="flex items-start gap-3 p-4 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 text-emerald-800 dark:text-emerald-200 animate__animated animate__fadeIn">
+                    <CheckCircle size={18} className="text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                     <p className="text-xs font-semibold leading-relaxed">
                       {t.contact.success}
                     </p>
@@ -302,8 +302,8 @@ export default function Contact() {
 
                 {/* Banner Status Gagal */}
                 {status === "error" && (
-                  <div className="flex items-start gap-3 p-4 rounded-xl bg-red-50 border border-red-200 text-red-800 animate__animated animate__fadeIn">
-                    <AlertCircle size={18} className="text-red-600 shrink-0 mt-0.5" />
+                  <div className="flex items-start gap-3 p-4 rounded-xl bg-red-50 dark:bg-red-950/40 border border-red-200 dark:border-red-800 text-red-800 dark:text-red-200 animate__animated animate__fadeIn">
+                    <AlertCircle size={18} className="text-red-600 dark:text-red-400 shrink-0 mt-0.5" />
                     <p className="text-xs font-semibold leading-relaxed">
                       {t.contact.error}
                     </p>

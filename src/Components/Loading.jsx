@@ -19,7 +19,7 @@ export default function Loading() {
 
   return (
     <div
-      className={`fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-white transition-opacity duration-500 ${
+      className={`fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-white dark:bg-[#0b1120] transition-opacity duration-500 ${
         isFadingOut ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
     >

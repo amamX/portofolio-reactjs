@@ -34,39 +34,39 @@ export default function Project({ items }) {
             key={val.id}
             data-aos="fade-up"
             data-aos-delay={index * 80}
-            className="group relative flex flex-col overflow-hidden bg-white rounded-2xl border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_15px_35px_-5px_rgba(0,0,0,0.1)] transition-all duration-300 hover:-translate-y-1.5"
+            className="group relative flex flex-col overflow-hidden bg-white dark:bg-slate-900/90 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_25px_-5px_rgba(0,0,0,0.4)] hover:shadow-[0_15px_35px_-5px_rgba(0,0,0,0.1)] dark:hover:shadow-[0_15px_35px_-5px_rgba(0,0,0,0.6)] transition-all duration-300 hover:-translate-y-1.5"
           >
             {/* Header Frame Mockup Browser */}
-            <div className="flex items-center justify-between px-4 py-2.5 bg-slate-50 border-b border-slate-100">
+            <div className="flex items-center justify-between px-4 py-2.5 bg-slate-50 dark:bg-slate-800/80 border-b border-slate-100 dark:border-slate-800">
               <div className="flex items-center gap-1.5">
                 <span className="w-2.5 h-2.5 rounded-full bg-red-400/80"></span>
                 <span className="w-2.5 h-2.5 rounded-full bg-amber-400/80"></span>
                 <span className="w-2.5 h-2.5 rounded-full bg-emerald-400/80"></span>
               </div>
-              <span className="text-[11px] font-medium text-slate-400 truncate max-w-[200px]">
+              <span className="text-[11px] font-medium text-slate-400 dark:text-slate-400 truncate max-w-[200px]">
                 {val.type}
               </span>
-              <span className="inline-block px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-md bg-slate-200/70 text-slate-700">
+              <span className="inline-block px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-md bg-slate-200/70 dark:bg-slate-700/70 text-slate-700 dark:text-slate-300">
                 {val.category}
               </span>
             </div>
 
             {/* Gambar Preview Proyek */}
-            <div className="relative overflow-hidden aspect-[16/10] bg-slate-100">
+            <div className="relative overflow-hidden aspect-[16/10] bg-slate-100 dark:bg-slate-800">
               <img
                 src={val.img}
                 alt={val.title}
                 loading="lazy"
                 className="object-cover object-top w-full h-full transition-transform duration-700 ease-out group-hover:scale-105"
               />
-              <div className="absolute inset-0 transition-opacity duration-300 opacity-0 bg-dark/20 group-hover:opacity-100 pointer-events-none" />
+              <div className="absolute inset-0 transition-opacity duration-300 opacity-0 bg-dark/20 dark:bg-black/30 group-hover:opacity-100 pointer-events-none" />
             </div>
 
             {/* Konten Kartu Proyek */}
             <div className="flex flex-col flex-1 p-6">
               {/* Judul Proyek */}
               <div className="flex items-start justify-between gap-2 mb-2">
-                <h4 className="text-xl font-bold tracking-tight text-slate-900 group-hover:text-primary transition-colors">
+                <h4 className="text-xl font-bold tracking-tight text-slate-900 dark:text-white group-hover:text-primary dark:group-hover:text-sky-400 transition-colors">
                   {val.title}
                 </h4>
                 {val.link && (
@@ -75,7 +75,7 @@ export default function Project({ items }) {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`Open ${val.title}`}
-                    className="p-1.5 text-slate-400 hover:text-primary transition-colors shrink-0"
+                    className="p-1.5 text-slate-400 dark:text-slate-400 hover:text-primary dark:hover:text-sky-400 transition-colors shrink-0"
                   >
                     <ArrowUpRight size={18} />
                   </a>
@@ -83,7 +83,7 @@ export default function Project({ items }) {
               </div>
 
               {/* Deskripsi Singkat */}
-              <p className="flex-1 text-sm leading-relaxed text-slate-600 mb-5">
+              <p className="flex-1 text-sm leading-relaxed text-slate-600 dark:text-slate-300 mb-5">
                 {description}
               </p>
 
@@ -93,7 +93,7 @@ export default function Project({ items }) {
                   val.tech.map((techItem, tIdx) => (
                     <span
                       key={tIdx}
-                      className="px-2.5 py-1 text-xs font-medium text-slate-600 bg-slate-100 rounded-md border border-slate-200/60"
+                      className="px-2.5 py-1 text-xs font-medium text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 rounded-md border border-slate-200/60 dark:border-slate-700/80"
                     >
                       {techItem}
                     </span>
@@ -101,7 +101,7 @@ export default function Project({ items }) {
               </div>
 
               {/* Tombol Aksi Bawah */}
-              <div className="flex items-center gap-3 pt-4 border-t border-slate-100 mt-auto">
+              <div className="flex items-center gap-3 pt-4 border-t border-slate-100 dark:border-slate-800 mt-auto">
                 {val.link ? (
                   <a
                     href={val.link}
@@ -113,7 +113,7 @@ export default function Project({ items }) {
                     <span>{t.projects.liveDemo}</span>
                   </a>
                 ) : (
-                  <span className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-medium text-slate-400 bg-slate-50 rounded-lg border border-slate-200/60">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-medium text-slate-400 dark:text-slate-400 bg-slate-50 dark:bg-slate-800/60 rounded-lg border border-slate-200/60 dark:border-slate-700">
                     <Globe size={13} />
                     <span>Internal Project</span>
                   </span>
@@ -124,7 +124,7 @@ export default function Project({ items }) {
                     href={val.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-semibold text-slate-700 transition-all duration-200 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 hover:text-black"
+                    className="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-semibold text-slate-700 dark:text-slate-200 transition-all duration-200 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-700 hover:text-black dark:hover:text-white"
                   >
                     <FaGithub size={13} />
                     <span>{t.projects.github}</span>

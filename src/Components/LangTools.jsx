@@ -22,10 +22,10 @@ export default function LangTools() {
           <Wrench size={14} className="text-primary" />
           <span>{t.tools?.badge || "KEAHLIAN TEKNIS"}</span>
         </div>
-        <h3 className="text-2xl font-extrabold text-dark md:text-3xl lg:text-4xl">
+        <h3 className="text-2xl font-extrabold text-dark dark:text-white md:text-3xl lg:text-4xl transition-colors">
           {t.tools?.title || "Bahasa & Alat Pengembangan"}
         </h3>
-        <p className="max-w-2xl mt-2 text-xs md:text-sm font-normal text-slate-500">
+        <p className="max-w-2xl mt-2 text-xs md:text-sm font-normal text-slate-500 dark:text-slate-400">
           {t.tools?.subtitle ||
             "Teknologi, bahasa pemrograman, framework, dan peralatan modern yang saya gunakan dalam membangun ekosistem web responsif."}
         </p>
@@ -34,14 +34,14 @@ export default function LangTools() {
       {/* Marquee Infinite Loop Container */}
       <div className="relative w-full py-4 overflow-hidden" data-aos="fade-up">
         {/* Gradient Fade di Sisi Kiri & Kanan */}
-        <div className="pointer-events-none absolute top-0 left-0 z-20 w-16 sm:w-24 h-full bg-gradient-to-r from-white via-white/80 to-transparent"></div>
-        <div className="pointer-events-none absolute top-0 right-0 z-20 w-16 sm:w-24 h-full bg-gradient-to-l from-white via-white/80 to-transparent"></div>
+        <div className="pointer-events-none absolute top-0 left-0 z-20 w-16 sm:w-24 h-full bg-gradient-to-r from-white dark:from-[#0b1120] via-white/80 dark:via-[#0b1120]/80 to-transparent transition-colors"></div>
+        <div className="pointer-events-none absolute top-0 right-0 z-20 w-16 sm:w-24 h-full bg-gradient-to-l from-white dark:from-[#0b1120] via-white/80 dark:via-[#0b1120]/80 to-transparent transition-colors"></div>
 
         <Marquee pauseOnHover={true} speed={28} className="py-2">
           {Data.map((skill) => (
             <div
               key={skill.id}
-              className="group relative flex flex-col items-center justify-center gap-2.5 mx-3.5 w-28 h-28 lg:w-32 lg:h-32 shrink-0 rounded-2xl bg-white/90 backdrop-blur-md shadow-[0_4px_20px_-4px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_25px_-5px_rgba(0,0,0,0.12)] transition-all duration-300 hover:-translate-y-2 cursor-pointer overflow-hidden border border-slate-200/80"
+              className="group relative flex flex-col items-center justify-center gap-2.5 mx-3.5 w-28 h-28 lg:w-32 lg:h-32 shrink-0 rounded-2xl bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-[0_4px_20px_-4px_rgba(0,0,0,0.06)] dark:shadow-[0_4px_20px_-4px_rgba(0,0,0,0.4)] hover:shadow-[0_12px_25px_-5px_rgba(0,0,0,0.12)] transition-all duration-300 hover:-translate-y-2 cursor-pointer overflow-hidden border border-slate-200/80 dark:border-slate-800"
             >
               {/* Garis aksen subtle di bagian atas yang menyala saat hover */}
               <div
@@ -51,14 +51,14 @@ export default function LangTools() {
 
               {/* Ambient radial glow di background saat hover */}
               <div
-                className="absolute inset-0 transition-opacity duration-300 rounded-2xl opacity-0 pointer-events-none group-hover:opacity-15"
+                className="absolute inset-0 transition-opacity duration-300 rounded-2xl opacity-0 pointer-events-none group-hover:opacity-20"
                 style={{
                   background: `radial-gradient(circle at center, ${skill.border}, transparent 70%)`,
                 }}
               />
 
               {/* Wadah logo dengan animasi scale */}
-              <div className="flex items-center justify-center w-12 h-12 transition-transform duration-300 rounded-xl bg-slate-50/80 group-hover:scale-110">
+              <div className="flex items-center justify-center w-12 h-12 transition-transform duration-300 rounded-xl bg-slate-50/80 dark:bg-slate-800/80 group-hover:scale-110">
                 <img
                   src={skill.logo}
                   alt={skill.title}
@@ -68,7 +68,7 @@ export default function LangTools() {
               </div>
 
               {/* Label nama teknologi */}
-              <span className="text-xs font-semibold tracking-wide transition-colors text-slate-600 group-hover:text-dark">
+              <span className="text-xs font-semibold tracking-wide transition-colors text-slate-600 dark:text-slate-300 group-hover:text-dark dark:group-hover:text-white">
                 {skill.title}
               </span>
             </div>

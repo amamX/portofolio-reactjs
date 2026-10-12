@@ -30,15 +30,15 @@ export default function Works() {
             <Sparkles size={14} className="text-primary" />
             <span>{t.projects.badge}</span>
           </div>
-          <h3 className="text-3xl font-extrabold text-dark lg:text-4xl">
+          <h3 className="text-3xl font-extrabold text-dark dark:text-white lg:text-4xl transition-colors">
             {t.projects.title}
           </h3>
-          <p className="max-w-2xl mt-3 text-sm font-normal text-slate-500 lg:text-base">
+          <p className="max-w-2xl mt-3 text-sm font-normal text-slate-500 dark:text-slate-400 lg:text-base">
             {t.projects.subtitle}
           </p>
 
           {/* Filter Segmented Pills */}
-          <div className="inline-flex items-center p-1.5 mt-8 bg-slate-100/90 backdrop-blur-md rounded-2xl border border-slate-200/80 shadow-xs">
+          <div className="inline-flex items-center p-1.5 mt-8 bg-slate-100/90 dark:bg-slate-900/90 backdrop-blur-md rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs">
             {categories.map((cat) => {
               const isActive = activeCategory === cat.id;
               return (
@@ -47,8 +47,8 @@ export default function Works() {
                   onClick={() => setActiveCategory(cat.id)}
                   className={`px-4 py-2 text-xs md:text-sm font-semibold rounded-xl transition-all duration-300 ${
                     isActive
-                      ? "bg-white text-primary shadow-sm"
-                      : "text-slate-600 hover:text-dark hover:bg-white/50"
+                      ? "bg-white dark:bg-slate-800 text-primary dark:text-sky-400 shadow-sm"
+                      : "text-slate-600 dark:text-slate-400 hover:text-dark dark:hover:text-white hover:bg-white/50 dark:hover:bg-slate-800/50"
                   }`}
                 >
                   {cat.label}

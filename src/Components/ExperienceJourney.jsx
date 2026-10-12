@@ -24,7 +24,7 @@ export default function ExperienceJourney() {
   // Konfigurasi icon dan logo untuk masing-masing item
   const itemIcons = {
     edu: {
-      nodeIcon: <Bot size={17} className="text-slate-700" />,
+      nodeIcon: <Bot size={17} className="text-slate-700 dark:text-slate-200" />,
       institutionLogo: (
         <img
           src={uniskaLogo}
@@ -34,7 +34,7 @@ export default function ExperienceJourney() {
       ),
     },
     dicoding: {
-      nodeIcon: <Database size={17} className="text-slate-700" />,
+      nodeIcon: <Database size={17} className="text-slate-700 dark:text-slate-200" />,
       institutionLogo: (
         <img
           src={dicodingLogo}
@@ -44,7 +44,7 @@ export default function ExperienceJourney() {
       ),
     },
     aws: {
-      nodeIcon: <Cloud size={17} className="text-slate-700" />,
+      nodeIcon: <Cloud size={17} className="text-slate-700 dark:text-slate-200" />,
       institutionLogo: (
         <div className="flex items-center justify-center w-5 h-5 rounded bg-[#232F3E]">
           <svg className="w-3.5 h-3.5" viewBox="0 0 24 24">
@@ -57,9 +57,9 @@ export default function ExperienceJourney() {
       ),
     },
     projects: {
-      nodeIcon: <Terminal size={17} className="text-slate-700" />,
+      nodeIcon: <Terminal size={17} className="text-slate-700 dark:text-slate-200" />,
       institutionLogo: (
-        <div className="flex items-center justify-center w-5 h-5 rounded bg-purple-100 text-purple-700">
+        <div className="flex items-center justify-center w-5 h-5 rounded bg-purple-100 dark:bg-purple-950/60 text-purple-700 dark:text-purple-300">
           <Code2 size={13} />
         </div>
       ),
@@ -70,14 +70,14 @@ export default function ExperienceJourney() {
     <div id="experience" className="self-center max-w-3xl mx-auto mt-20 lg:mt-24">
       {/* Header Bagian Experience */}
       <div className="flex items-center gap-3 mb-12" data-aos="fade-up">
-        <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-primary/10 text-primary">
+        <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-primary/10 dark:bg-primary/20 text-primary dark:text-sky-400">
           <Briefcase size={22} />
         </div>
         <div>
-          <h3 className="text-2xl font-bold tracking-tight text-dark md:text-3xl">
+          <h3 className="text-2xl font-bold tracking-tight text-dark dark:text-white md:text-3xl transition-colors">
             {t.experience.title}
           </h3>
-          <p className="text-xs font-medium text-slate-400 mt-0.5">
+          <p className="text-xs font-medium text-slate-500 dark:text-slate-400 mt-0.5">
             {t.experience.subtitle}
           </p>
         </div>
@@ -86,7 +86,7 @@ export default function ExperienceJourney() {
       {/* Timeline Kontainer dengan Garis di Sisi Kiri */}
       <div className="relative pl-8 sm:pl-10">
         {/* Garis vertikal timeline */}
-        <div className="absolute top-2.5 bottom-2.5 left-[13px] sm:left-[15px] w-[2px] bg-slate-200"></div>
+        <div className="absolute top-2.5 bottom-2.5 left-[13px] sm:left-[15px] w-[2px] bg-slate-200 dark:bg-slate-800"></div>
 
         <div className="space-y-12">
           {t.experience.items.map((exp, index) => {
@@ -100,31 +100,31 @@ export default function ExperienceJourney() {
                 data-aos-delay={index * 100}
               >
                 {/* Node Icon di atas garis vertikal */}
-                <div className="absolute -left-[30px] sm:-left-[34px] top-0 flex items-center justify-center w-8 h-8 rounded-full bg-white border border-slate-200 shadow-sm z-10 transition-transform duration-200 hover:scale-110">
+                <div className="absolute -left-[30px] sm:-left-[34px] top-0 flex items-center justify-center w-8 h-8 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-sm z-10 transition-transform duration-200 hover:scale-110">
                   {visual.nodeIcon}
                 </div>
 
                 {/* Konten Item Pengalaman */}
                 <div className="flex flex-col items-start">
                   {/* Badge Institusi / Perusahaan dengan Logo */}
-                  <div className="inline-flex items-center gap-2 px-2.5 py-1 mb-2 rounded-lg bg-slate-100 text-slate-800 text-xs font-medium border border-slate-200/60">
+                  <div className="inline-flex items-center gap-2 px-2.5 py-1 mb-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 text-xs font-medium border border-slate-200/60 dark:border-slate-700/80">
                     {visual.institutionLogo}
                     <span>{exp.institution}</span>
                   </div>
 
                   {/* Judul Posisi / Role */}
-                  <h4 className="text-xl font-bold tracking-tight text-slate-900 md:text-2xl">
+                  <h4 className="text-xl font-bold tracking-tight text-slate-900 dark:text-white md:text-2xl">
                     {exp.role}
                   </h4>
 
                   {/* Periode Kalender */}
-                  <div className="flex items-center gap-1.5 mt-1.5 text-xs md:text-sm font-medium text-slate-500">
-                    <Calendar size={14} className="text-slate-400" />
+                  <div className="flex items-center gap-1.5 mt-1.5 text-xs md:text-sm font-medium text-slate-500 dark:text-slate-400">
+                    <Calendar size={14} className="text-slate-400 dark:text-slate-500" />
                     <span>{exp.period}</span>
                   </div>
 
                   {/* Paragraf Deskripsi */}
-                  <p className="mt-3 text-sm md:text-[15px] leading-relaxed text-slate-600 max-w-2xl">
+                  <p className="mt-3 text-sm md:text-[15px] leading-relaxed text-slate-600 dark:text-slate-300 max-w-2xl">
                     {exp.description}
                   </p>
 
@@ -133,7 +133,7 @@ export default function ExperienceJourney() {
                     {exp.skills.map((skill, sIdx) => (
                       <span
                         key={sIdx}
-                        className="px-3 py-1 text-xs font-medium text-slate-700 bg-slate-100 rounded-full transition-colors hover:bg-slate-200"
+                        className="px-3 py-1 text-xs font-medium text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 rounded-full transition-colors hover:bg-slate-200 dark:hover:bg-slate-700 border border-transparent dark:border-slate-700/60"
                       >
                         {skill}
                       </span>

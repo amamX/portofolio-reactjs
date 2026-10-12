@@ -11,6 +11,35 @@ import Footer from "./Components/Footer";
 import Loading from "./Components/Loading";
 import KineticGridBackground from "./Components/KineticGridBackground";
 import { LanguageProvider } from "./context/LanguageContext";
+import { ThemeProvider, useTheme } from "./context/ThemeContext";
+
+function MainContent() {
+  const { isDark } = useTheme();
+
+  return (
+    <div className="relative min-h-screen overflow-x-clip bg-white dark:bg-[#0b1120] text-slate-800 dark:text-slate-100 selection:bg-primary selection:text-white transition-colors duration-300">
+      {/* Background Canvas Interaktif: Kinetic Grid (Warping ke Kursor & Ripple saat Klik) */}
+      <KineticGridBackground
+        gridColor={isDark ? "rgba(255, 255, 255, 0.05)" : "rgba(148, 163, 184, 0.18)"}
+        dotColor={isDark ? "rgba(148, 163, 184, 0.22)" : "rgba(100, 116, 139, 0.28)"}
+        activeDotColor={isDark ? "rgba(56, 189, 248, 1)" : "rgba(14, 165, 233, 0.95)"}
+        activeLineColor={isDark ? "rgba(56, 189, 248, 0.65)" : "rgba(56, 189, 248, 0.55)"}
+      />
+
+      <Loading />
+      <Navbar />
+      <div className="relative z-10">
+        <Home />
+        <About />
+        <Works />
+        <Contact />
+      </div>
+      <div className="relative z-20">
+        <Footer />
+      </div>
+    </div>
+  );
+}
 
 function App() {
   useEffect(() => {
@@ -42,24 +71,11 @@ function App() {
   }, []);
 
   return (
-    <LanguageProvider>
-      <div className="relative min-h-screen overflow-x-clip bg-white selection:bg-primary selection:text-white">
-        {/* Background Canvas Interaktif: Kinetic Grid (Warping ke Kursor & Ripple saat Klik) */}
-        <KineticGridBackground />
-
-        <Loading />
-        <Navbar />
-        <div className="relative z-10">
-          <Home />
-          <About />
-          <Works />
-          <Contact />
-        </div>
-        <div className="relative z-20">
-          <Footer />
-        </div>
-      </div>
-    </LanguageProvider>
+    <ThemeProvider>
+      <LanguageProvider>
+        <MainContent />
+      </LanguageProvider>
+    </ThemeProvider>
   );
 }
 

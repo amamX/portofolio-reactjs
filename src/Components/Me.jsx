@@ -47,7 +47,7 @@ export default function Me() {
           <Sparkles size={14} className="text-primary animate-pulse" />
           <span>{t.about.badge}</span>
         </div>
-        <h2 className="text-3xl font-extrabold tracking-tight text-dark lg:text-5xl">
+        <h2 className="text-3xl font-extrabold tracking-tight text-dark dark:text-white lg:text-5xl transition-colors">
           {t.about.titlePrefix} <span className="text-primary">{t.about.titleSuffix}</span>
         </h2>
         <div className="w-16 h-1 mt-3 rounded-full bg-gradient-to-r from-primary to-cyan-400"></div>
@@ -73,28 +73,28 @@ export default function Me() {
             <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-primary/30 via-cyan-400/20 to-purple-500/30 blur-[60px] -z-10"></div>
 
             {/* Bingkai Luar Modern Glassmorphism */}
-            <div className="relative p-3.5 bg-white/90 backdrop-blur-xl border border-slate-200/80 shadow-[0_20px_50px_rgba(8,_112,_184,_0.1)] rounded-3xl overflow-hidden">
-              <div className="relative overflow-hidden aspect-[4/5] rounded-2xl bg-slate-100">
+            <div className="relative p-3.5 bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800 shadow-[0_20px_50px_rgba(8,_112,_184,_0.1)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.5)] rounded-3xl overflow-hidden transition-colors">
+              <div className="relative overflow-hidden aspect-[4/5] rounded-2xl bg-slate-100 dark:bg-slate-800">
                 <motion.img
                   src={Dep}
                   alt="Ahmad Maulana"
                   className="object-cover object-top w-full h-full transition-transform duration-700 hover:scale-105"
                   style={{ transform: "translateZ(30px)" }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-dark/60 via-transparent to-transparent pointer-events-none"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-dark/60 dark:from-black/70 via-transparent to-transparent pointer-events-none"></div>
 
                 {/* Badge Status di dalam foto */}
-                <div className="absolute bottom-3 left-3 right-3 p-3 bg-white/90 backdrop-blur-md rounded-xl border border-white/40 shadow-sm flex items-center justify-between">
+                <div className="absolute bottom-3 left-3 right-3 p-3 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md rounded-xl border border-white/40 dark:border-slate-700/80 shadow-sm flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <span className="relative flex w-2.5 h-2.5">
                       <span className="absolute inline-flex w-full h-full rounded-full opacity-75 animate-ping bg-emerald-400"></span>
                       <span className="relative inline-flex w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
                     </span>
-                    <span className="text-xs font-semibold text-slate-700">
+                    <span className="text-xs font-semibold text-slate-700 dark:text-slate-200">
                       {t.about.statusAvailable}
                     </span>
                   </div>
-                  <span className="text-[11px] font-medium text-slate-500">
+                  <span className="text-[11px] font-medium text-slate-500 dark:text-slate-400">
                     {t.about.statusType}
                   </span>
                 </div>
@@ -105,18 +105,18 @@ export default function Me() {
 
         {/* Kolom Kanan: Narasi Profesional & Download CV */}
         <div className="lg:col-span-7">
-          <h3 className="mb-4 text-2xl font-bold leading-snug text-dark lg:text-4xl">
+          <h3 className="mb-4 text-2xl font-bold leading-snug text-dark dark:text-white lg:text-4xl transition-colors">
             {t.about.headlinePrefix}{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-600 to-cyan-500">
               {t.about.headlineSuffix}
             </span>
           </h3>
 
-          <p className="mb-4 text-base leading-relaxed text-slate-600">
+          <p className="mb-4 text-base leading-relaxed text-slate-600 dark:text-slate-300">
             {t.about.paragraph1}
           </p>
 
-          <p className="mb-6 text-base leading-relaxed text-slate-600">
+          <p className="mb-6 text-base leading-relaxed text-slate-600 dark:text-slate-300">
             {t.about.paragraph2}
           </p>
 
@@ -127,15 +127,15 @@ export default function Me() {
               return (
                 <div
                   key={idx}
-                  className="p-3.5 bg-slate-50/80 border border-slate-200/60 rounded-xl hover:bg-white hover:shadow-md transition-all duration-300"
+                  className="p-3.5 bg-slate-50/80 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800 rounded-xl hover:bg-white dark:hover:bg-slate-800 hover:shadow-md transition-all duration-300"
                 >
-                  <div className="flex items-center justify-center w-8 h-8 mb-2 rounded-lg bg-primary/10 text-primary">
+                  <div className="flex items-center justify-center w-8 h-8 mb-2 rounded-lg bg-primary/10 text-primary dark:text-sky-400">
                     <Icon size={16} />
                   </div>
-                  <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-400">
+                  <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-400">
                     {item.title}
                   </h4>
-                  <p className="text-xs font-bold text-dark mt-0.5">
+                  <p className="text-xs font-bold text-dark dark:text-slate-100 mt-0.5">
                     {item.desc}
                   </p>
                 </div>
@@ -155,13 +155,13 @@ export default function Me() {
           </div>
 
           {/* Baris Metrik & Statistik */}
-          <div className="grid grid-cols-3 gap-6 pt-6 border-t border-slate-200">
+          <div className="grid grid-cols-3 gap-6 pt-6 border-t border-slate-200 dark:border-slate-800">
             {t.about.stats.map((stat, idx) => (
               <div key={idx}>
-                <p className="text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-dark to-slate-700 lg:text-3xl">
+                <p className="text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-dark to-slate-700 dark:from-white dark:to-slate-300 lg:text-3xl">
                   {stat.value}
                 </p>
-                <p className="mt-1 text-xs font-medium text-slate-500">
+                <p className="mt-1 text-xs font-medium text-slate-500 dark:text-slate-400">
                   {stat.label}
                 </p>
               </div>
